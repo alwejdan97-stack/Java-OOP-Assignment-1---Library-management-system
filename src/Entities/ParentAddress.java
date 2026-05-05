@@ -6,9 +6,6 @@ public class ParentAddress {
     private UUID id;
     private String name;
     private String phoneNumber;
-    private
-
-
 
     public void setId(UUID id){
         this.id=id;
@@ -22,7 +19,6 @@ public class ParentAddress {
     public String getName(){
         return name;
     }
-
     public void findById(UUID id){
         this.id=id;
     }
