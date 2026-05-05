@@ -1,8 +1,10 @@
 package Entities;
 
+import Behaviours.LibraryInterface;
+
 import java.util.List;
 
-public class Library extends ParentAddress{
+public class Library extends ParentAddress implements LibraryInterface {
     private List<Magazine> magazineList;
     private List<Book> bookList;
     private List<Memeber> memeberList;
@@ -26,4 +28,32 @@ public class Library extends ParentAddress{
         return memeberList;
     }
 
+
+    @Override
+    public Boolean registerMember(Memeber memeber) {
+        Boolean status=memeberList.add(memeber);
+        return status;
+    }
+
+    @Override
+    public Boolean addMagazine(Magazine magazine) {
+        Boolean status=magazineList.add(magazine);
+        return status;
+    }
+
+    @Override
+    public Boolean addBook(Book book) {
+        Boolean status=bookList.add(book);
+        return status;
+    }
+
+    @Override
+    public void displayMagazine() {
+
+    }
+
+    @Override
+    public void displayBook() {
+
+    }
 }
