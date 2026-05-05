@@ -1,14 +1,12 @@
 package Entities;
 
-import Behaviours.ItemInterface;
-
 public class Book extends LibraryItem{
-    private String bookCode;
+    private String code;
 
-    public void setBookCode(String bookCode){
-        this.bookCode=bookCode;
+    public void setCode(String code){
+        this.code = code;
     }
-    public String getBookCode(){
-        return bookCode;
+    public String getCode(){
+        return code;
     }
 }

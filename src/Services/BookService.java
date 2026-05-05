@@ -26,7 +26,7 @@ public class BookService {
 
         System.out.println("Enter book code");
         String bookCode = scanner.nextLine();
-        book.setBookCode(bookCode);
+        book.setCode(bookCode);
 
         return book;
     }
