@@ -1,17 +1,14 @@
-/*package Entities;
+package Entities;
 
 import java.util.List;
 import java.util.UUID;
 
-public class ParentAddress {
+public class Address {
     private UUID id;
     private String name;
     private String phoneNumber;
     private String street;
     private String city;
-    private List<Magazine> magazineList;
-    private List<Book> bookList;
-    private List<Member> memeberList;
 
 
     public void setId(UUID id) {
@@ -61,28 +58,4 @@ public class ParentAddress {
     public void displayByName(String name) {
         this.name = name;
     }
-
-    public void setMagazineList(List<Magazine> magazineList) {
-        this.magazineList = magazineList;
-    }
-
-    public List<Magazine> getMagazineList() {
-        return magazineList;
-    }
-
-    public void setBookList(List<Book> bookList) {
-        this.bookList = bookList;
-    }
-
-    public List<Book> getBookList() {
-        return bookList;
-    }
-
-    public void setMemeberList(List<Member> memeberList) {
-        this.memeberList = memeberList;
-    }
-
-    public List<Member> getMemeberList() {
-        return memeberList;
-    }
-}*/
+}
