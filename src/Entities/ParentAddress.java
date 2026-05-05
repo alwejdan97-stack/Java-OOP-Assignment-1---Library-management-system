@@ -1,5 +1,6 @@
 package Entities;
 
+import java.util.List;
 import java.util.UUID;
 
 public class ParentAddress {
@@ -25,5 +26,13 @@ public class ParentAddress {
     public void displayByName(String name){
         this.name=name;
     }
-
+    public List<Book> bookList(){
+        return bookList();
+    }
+    public List<Magazine> magazineList(){
+        return magazineList();
+    }
+    public List<Memeber> memeberList(){
+        return memeberList();
+    }
 }
