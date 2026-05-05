@@ -1,7 +1,6 @@
 package Entities;
 
 import Behaviours.MemberInterface;
-import ObjectOrientedProgramming.OOPDemo.Utils.Constants;
 
 import java.util.List;
 

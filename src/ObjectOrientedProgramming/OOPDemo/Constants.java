@@ -1,4 +1,4 @@
-package ObjectOrientedProgramming.OOPDemo.Utils;
+package ObjectOrientedProgramming.OOPDemo;
 
 
 public class Constants {
