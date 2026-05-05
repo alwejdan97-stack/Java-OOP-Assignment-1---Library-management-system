@@ -4,25 +4,10 @@ import Behaviours.MemberInterface;
 
 import java.util.List;
 
-public class Member extends ParentAddress implements MemberInterface {
-    private String dateOfBorrow;
-    private String dateOfReturn;
+public class Member extends Address{
+    private List<LibraryItem> borrowItemList;
 
-    public void setDateOfBorrow(String dateOfBorrow){
-        this.dateOfBorrow=dateOfBorrow;
-    }
-    public String getDateOfBorrow(){
-        return dateOfBorrow;
-    }
-    public void setDateOfReturn(String dateOfReturn){
-        this.dateOfReturn=dateOfReturn;
-    }
-    public String getDateOfReturn(){
-        return dateOfReturn;
-    }
-
-    @Override
-    public void borrowBook(Book book) {
+    /*public void borrowBook(Book book) {
         if (!(book.equals(null) && book.getId().equals(null))) {
             List<Book> tempBookList = this.getBookList();
             tempBookList.add(book);
@@ -43,10 +28,8 @@ public class Member extends ParentAddress implements MemberInterface {
         } else {
             System.out.println("Member borrowing has FAILED");
         }
-    }
-
-    @Override
-    public void returnBook(Integer bookIdToReturn) {
+    }*/
+    /*public void returnBook(Integer bookIdToReturn) {
         List<Book> tempBookList = this.getBookList();
         for(Book b:tempBookList){
             if(b.getId().equals(b)){
@@ -54,10 +37,9 @@ public class Member extends ParentAddress implements MemberInterface {
             }
         }
         this.setBookList(tempBookList);
-    }
+    }*/
 
-    @Override
-    public void returnMagazine(Integer magazineIdToReturn) {
+    /*public void returnMagazine(Integer magazineIdToReturn) {
         List<Magazine> tempMagazineList = this.getMagazineList();
         for(Magazine m:tempMagazineList){
             if(m.getId().equals(m)){
@@ -65,5 +47,12 @@ public class Member extends ParentAddress implements MemberInterface {
             }
         }
         this.setMagazineList(tempMagazineList);
+    }*/
+
+    public void borrowItem(LibraryItem item){
+        borrowItemList.add(item);
+    }
+    public void returnItem(LibraryItem item){
+        borrowItemList.remove(item);
     }
 }
