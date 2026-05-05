@@ -1,4 +1,5 @@
-package Utlis;
+package ObjectOrientedProgramming.OOPDemo.Utils;
+
 
 public class Constants {
     public String MEMBER_BOOK_BORROW = "Book has been borrowed for this member";

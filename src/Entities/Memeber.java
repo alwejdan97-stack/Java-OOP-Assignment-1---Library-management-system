@@ -1,6 +1,7 @@
 package Entities;
 
 import Behaviours.MemberInterface;
+import ObjectOrientedProgramming.OOPDemo.Utils.Constants;
 
 import java.util.List;
 
@@ -27,9 +28,9 @@ public class Memeber extends ParentAddress implements MemberInterface {
             List<Book> tempBookList = this.getBookList();
             tempBookList.add(book);
             this.setBookList(tempBookList);
-            System.out.println(Constants.STUDENT_COURSE_REGISTERED);
+            System.out.println("Book has been borrowed for this member");
         } else {
-            System.out.println(Constants.STUDENT_COURSE_NOT_REGISTERED);
+            System.out.println("Member borrowing has FAILED");
         }
     }
 
