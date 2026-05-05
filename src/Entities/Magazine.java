@@ -1,4 +1,4 @@
 package Entities;
 
-public class Magazine {
+public class Magazine extends ParentItems{
 }

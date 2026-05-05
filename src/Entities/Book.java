@@ -1,4 +1,4 @@
 package Entities;
 
-public class Book {
+public class Book extends ParentItems{
 }
