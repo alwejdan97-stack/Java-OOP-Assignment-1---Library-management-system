@@ -7,6 +7,8 @@ public class ParentAddress {
     private UUID id;
     private String name;
     private String phoneNumber;
+    private String street;
+    private String city;
     private List<Magazine> magazineList;
     private List<Book> bookList;
     private List<Memeber> memeberList;
@@ -34,6 +36,22 @@ public class ParentAddress {
 
     public String getPhoneNumber(){
         return phoneNumber;
+    }
+
+    public void setStreet(String street){
+        this.street=street;
+    }
+
+    public String getStreet(){
+        return street;
+    }
+
+    public void setCity(String city){
+        this.city=city;
+    }
+
+    public String getCity(){
+        return city;
     }
 
     public void findById(UUID id) {

@@ -25,7 +25,7 @@ public class MemberService {
 
             System.out.println("Enter phone number");
             String phoneNumber = scanner.nextLine();
-
+            memeber.setPhoneNumber(phoneNumber);
 
             return memeber;
         }
