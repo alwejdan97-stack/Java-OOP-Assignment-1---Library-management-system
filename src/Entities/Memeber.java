@@ -36,7 +36,14 @@ public class Memeber extends ParentAddress implements MemberInterface {
 
     @Override
     public void borrowMagazine(Magazine magazine) {
-
+        if (!(magazine.equals(null) && magazine.getId().equals(null))) {
+            List<Magazine> tempMagazineList = this.getMagazineList();
+            tempMagazineList.add(magazine);
+            this.setMagazineList(tempMagazineList);
+            System.out.println("Magazine has been borrowed for this member");
+        } else {
+            System.out.println("Member borrowing has FAILED");
+        }
     }
 
     @Override
