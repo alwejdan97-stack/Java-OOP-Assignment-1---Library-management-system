@@ -14,8 +14,6 @@ public class MemberService {
     LibraryItem libraryItem=new LibraryItem();
     public static Scanner scanner=new Scanner(System.in);
 
-
-
     public Member addNewMember(){
             System.out.println("*** Adding new member ***");
             memeber.setId(UUID.randomUUID());
@@ -52,7 +50,7 @@ public class MemberService {
         return memeberList;
     }
 
-    public void findById() {
+    public Member findById() {
         displayMembers();
         System.out.println("Enter member ID to search");
         String memberId=scanner.nextLine();
@@ -66,6 +64,7 @@ public class MemberService {
         if(!found){
             System.out.println("Member NOT found");
         }
+        return memeber;
     }
 
     public void displayMembers(){
