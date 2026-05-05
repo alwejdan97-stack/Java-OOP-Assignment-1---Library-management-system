@@ -8,5 +8,4 @@ public interface ItemInterface {
     Boolean borrowBookStatus(Magazine magazine);
     Boolean returnBookStatus(Book book);
     Boolean returnMagazineStatus(Magazine magazine);
-
 }
