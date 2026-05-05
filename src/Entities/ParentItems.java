@@ -7,7 +7,6 @@ public class ParentItems {
     private UUID id;
     private Boolean status;
 
-
     public void setTitle(String title){
         this.title=title;
     }
