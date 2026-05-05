@@ -48,10 +48,10 @@ public class LibraryItemService {
         return libraryItem;
     }
 
-    public void searchByTitle(){
+    public void searchByTitle(String itemToSearch){
         displayItems();
-        System.out.println("Enter item to search");
-        String itemToSearch=scanner.nextLine();
+        /*System.out.println("Enter item to search");
+        String itemToSearch=scanner.nextLine();*/
         for(LibraryItem l:itemList){
             if(l.getTitle().equalsIgnoreCase(itemToSearch)){
                 System.out.println("Item Name: "+l.getTitle()+" | ID: "+l.getId()+" | Status: "+l.getStatus());

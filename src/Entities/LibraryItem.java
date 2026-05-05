@@ -1,12 +1,11 @@
 package Entities;
 
-import Behaviours.LibraryInterface;
 
 import java.util.List;
 import java.util.UUID;
 
 public class LibraryItem{
-    private String id;
+    private UUID id;
     private String title;
     private Boolean status;
 
