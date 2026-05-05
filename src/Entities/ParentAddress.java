@@ -26,13 +26,13 @@ public class ParentAddress {
     public void displayByName(String name){
         this.name=name;
     }
-    public List<Book> bookList(){
+    public List<Book> getBookList(){
         return bookList();
     }
-    public List<Magazine> magazineList(){
+    public List<Magazine> getMagazineList(){
         return magazineList();
     }
-    public List<Memeber> memeberList(){
+    public List<Memeber> getMemeberList(){
         return memeberList();
     }
 }
