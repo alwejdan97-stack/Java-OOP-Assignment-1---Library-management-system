@@ -2,24 +2,20 @@ package Entities;
 
 import Behaviours.ItemInterface;
 
-public class Book extends ParentItems implements ItemInterface {
-    @Override
-    public Boolean borrowBookStatus(Book book) {
-        return null;
-    }
+public class Book extends ParentItems{
+    private String bookCode;
+    private String magazineCode;
 
-    @Override
-    public Boolean borrowBookStatus(Magazine magazine) {
-        return null;
+    public void setBookCode(String bookCodek){
+        this.bookCode=bookCode;
     }
-
-    @Override
-    public Boolean returnBookStatus(Book book) {
-        return null;
+    public String getBookCode(){
+        return bookCode;
     }
-
-    @Override
-    public Boolean returnMagazineStatus(Magazine magazine) {
-        return null;
+    public void setMagazineCode(String magazineCode){
+        this.magazineCode=magazineCode;
+    }
+    public String getMagazineCode(){
+        return magazineCode;
     }
 }
