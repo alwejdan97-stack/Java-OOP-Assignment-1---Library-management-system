@@ -48,11 +48,23 @@ public class Memeber extends ParentAddress implements MemberInterface {
 
     @Override
     public void returnBook(Integer bookIdToReturn) {
-
+        List<Book> tempBookList = this.getBookList();
+        for(Book b:tempBookList){
+            if(b.getId().equals(b)){
+                tempBookList.remove(b);
+            }
+        }
+        this.setBookList(tempBookList);
     }
 
     @Override
     public void returnMagazine(Integer magazineIdToReturn) {
-
+        List<Magazine> tempMagazineList = this.getMagazineList();
+        for(Magazine m:tempMagazineList){
+            if(m.getId().equals(m)){
+                tempMagazineList.remove(m);
+            }
+        }
+        this.setMagazineList(tempMagazineList);
     }
 }
