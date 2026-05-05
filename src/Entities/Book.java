@@ -6,7 +6,7 @@ public class Book extends ParentItems{
     private String bookCode;
     private String magazineCode;
 
-    public void setBookCode(String bookCodek){
+    public void setBookCode(String bookCode){
         this.bookCode=bookCode;
     }
     public String getBookCode(){
