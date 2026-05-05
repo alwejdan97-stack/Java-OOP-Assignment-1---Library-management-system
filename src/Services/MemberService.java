@@ -11,13 +11,13 @@ import java.util.UUID;
 public class MemberService {
     Member memeber=new Member();
     public List<Member> memeberList=new ArrayList<>();
-    LibraryItem library=new LibraryItem();
+    LibraryItem libraryItem=new LibraryItem();
     public static Scanner scanner=new Scanner(System.in);
 
 
 
     public Member addNewMember(){
-            System.out.println("** Adding new member **");
+            System.out.println("*** Adding new member ***");
             memeber.setId(UUID.randomUUID());
 
             System.out.println("Enter member name");
@@ -43,8 +43,8 @@ public class MemberService {
         Boolean continueFlag = true;
         while (continueFlag) {
             memeberList.add(addNewMember());
-            System.out.println( "Enter q to exit, press ENTER to continue for adding more members");
-            if (scanner.nextLine().equalsIgnoreCase("q")) {
+            System.out.println( "Enter c to exit, press ENTER to continue for adding more members");
+            if (scanner.nextLine().equalsIgnoreCase("c")) {
                 continueFlag = false;
             }
         }

@@ -10,8 +10,9 @@ import java.util.List;
 import java.util.*;
 
 public class BorrowReturnService {
-
-    LibraryItem item=new LibraryItem();
+    LibraryItemService libraryItemService=new LibraryItemService();
+    MemberService memberService=new MemberService();
+    LibraryItem itemList=new LibraryItem();
     Member member=new Member();
     public static Scanner scanner=new Scanner(System.in);
 
