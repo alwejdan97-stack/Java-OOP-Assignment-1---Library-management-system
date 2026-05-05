@@ -38,4 +38,17 @@ public class MemberService {
             return memeber;
         }
 
+    public List<Memeber> addNewMembers(){
+        Boolean continueFlag = true;
+        while (continueFlag) {
+            memeberList.add(addNewMember());
+            System.out.println( "Enter q to exit, press ENTER to continue for adding more members");
+            if (scanner.nextLine().equalsIgnoreCase("q")) {
+                continueFlag = false;
+            }
+        }
+
+        return memeberList;
+    }
+
 }
