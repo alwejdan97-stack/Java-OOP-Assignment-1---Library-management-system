@@ -2,10 +2,10 @@ package Behaviours;
 
 import Entities.Book;
 import Entities.Magazine;
-import Entities.Memeber;
+import Entities.Member;
 
 public interface LibraryInterface {
-    Boolean registerMember(Memeber memeber);
+    Boolean registerMember(Member memeber);
     Boolean addMagazine(Magazine magazine);
     Boolean addBook(Book book);
     void displayMagazine();

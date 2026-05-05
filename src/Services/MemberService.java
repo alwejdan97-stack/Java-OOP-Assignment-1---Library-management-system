@@ -1,8 +1,7 @@
 package Services;
 
-import Entities.Book;
-import Entities.Library;
-import Entities.Memeber;
+import Entities.LibraryItem;
+import Entities.Member;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,12 +9,14 @@ import java.util.Scanner;
 import java.util.UUID;
 
 public class MemberService {
-    Memeber memeber=new Memeber();
-    public List<Memeber> memeberList=new ArrayList<>();
-    Library library=new Library();
+    Member memeber=new Member();
+    public List<Member> memeberList=new ArrayList<>();
+    LibraryItem library=new LibraryItem();
     public static Scanner scanner=new Scanner(System.in);
 
-    public Memeber addNewMember(){
+
+
+    public Member addNewMember(){
             System.out.println("** Adding new member **");
             memeber.setId(UUID.randomUUID());
 
@@ -38,7 +39,7 @@ public class MemberService {
             return memeber;
         }
 
-    public List<Memeber> addNewMembers(){
+    public List<Member> addNewMembers(){
         Boolean continueFlag = true;
         while (continueFlag) {
             memeberList.add(addNewMember());
@@ -49,6 +50,32 @@ public class MemberService {
         }
 
         return memeberList;
+    }
+
+    public Member findById() {
+        displayMembers();
+        System.out.println("Enter member ID to search");
+        String memberId=scanner.nextLine();
+        Boolean found=false;
+        for(Member m: memeberList){
+            if(m.getId().equals(memberId)){
+                System.out.println("Member found");
+                found=true;
+            }
+        }
+        if(!found){
+            System.out.println("Member NOT found");
+        }
+        return memeber;
+    }
+
+    public void displayMembers(){
+        if(memeberList.isEmpty()){
+            System.out.println("No member in the list");
+        }
+        for(Member m: memeberList){
+            System.out.println("Member name: "+m.getName()+" | " + "Member ID: "+m.getId());
+        }
     }
 
 }

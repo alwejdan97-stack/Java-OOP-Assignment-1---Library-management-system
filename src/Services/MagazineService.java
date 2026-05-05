@@ -1,9 +1,8 @@
 package Services;
 
-import Entities.Book;
-import Entities.Library;
+import Entities.LibraryItem;
 import Entities.Magazine;
-import Entities.Memeber;
+import Entities.Member;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,8 +11,8 @@ import java.util.UUID;
 
 public class MagazineService {
     public List<Magazine> magazineList=new ArrayList<>();
-    Memeber member=new Memeber();
-    Library library=new Library();
+    Member member=new Member();
+    LibraryItem library=new LibraryItem();
     Magazine magazine=new Magazine();
     public static Scanner scanner=new Scanner(System.in);
 

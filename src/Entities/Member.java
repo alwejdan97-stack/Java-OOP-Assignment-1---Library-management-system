@@ -4,7 +4,7 @@ import Behaviours.MemberInterface;
 
 import java.util.List;
 
-public class Memeber extends ParentAddress implements MemberInterface {
+public class Member extends ParentAddress implements MemberInterface {
     private String dateOfBorrow;
     private String dateOfReturn;
 

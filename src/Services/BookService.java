@@ -1,8 +1,8 @@
 package Services;
 
 import Entities.Book;
-import Entities.Library;
-import Entities.Memeber;
+import Entities.LibraryItem;
+import Entities.Member;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,8 +11,8 @@ import java.util.UUID;
 
 public class BookService {
     public List<Book> bookList=new ArrayList<>();
-    Memeber member=new Memeber();
-    Library library=new Library();
+    Member member=new Member();
+    LibraryItem library=new LibraryItem();
     Book book=new Book();
     public static Scanner scanner=new Scanner(System.in);
 

@@ -4,14 +4,14 @@ import Behaviours.LibraryInterface;
 
 import java.util.List;
 
-public class Library extends ParentAddress implements LibraryInterface {
+public class LibraryItem extends ParentAddress implements LibraryInterface {
     public List<Magazine> magazineList;
     public List<Book> bookList;
-    public List<Memeber> memeberList;
+    public List<Member> memeberList;
 
 
     @Override
-    public Boolean registerMember(Memeber memeber) {
+    public Boolean registerMember(Member memeber) {
         Boolean status=memeberList.add(memeber);
         return status;
     }

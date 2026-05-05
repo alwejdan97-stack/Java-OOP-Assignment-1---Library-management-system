@@ -11,7 +11,7 @@ public class ParentAddress {
     private String city;
     private List<Magazine> magazineList;
     private List<Book> bookList;
-    private List<Memeber> memeberList;
+    private List<Member> memeberList;
 
 
     public void setId(UUID id) {
@@ -78,11 +78,11 @@ public class ParentAddress {
         return bookList;
     }
 
-    public void setMemeberList(List<Memeber> memeberList) {
+    public void setMemeberList(List<Member> memeberList) {
         this.memeberList = memeberList;
     }
 
-    public List<Memeber> getMemeberList() {
+    public List<Member> getMemeberList() {
         return memeberList;
     }
 }
