@@ -10,7 +10,7 @@ public class LibraryItem{
     private String title;
     private Boolean status;
 
-    public void setId(String id){
+    public void setId(UUID id){
         this.id=id;
     }
     public String getId(){
@@ -35,4 +35,5 @@ public class LibraryItem{
     public void returnItem(){
         this.status=true;
     }
+
 }

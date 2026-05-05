@@ -1,10 +1,12 @@
 package Services;
 
 import Entities.LibraryItem;
+import com.sun.security.auth.UnixNumericUserPrincipal;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.UUID;
 import java.util.UUID;
 
 public class LibraryItemService {
@@ -12,23 +14,31 @@ public class LibraryItemService {
     LibraryItem libraryItem=new LibraryItem();
     public static Scanner scanner=new Scanner(System.in);
 
-    /*public List<LibraryItem> addItem(LibraryItem item){
-        System.out.println("** Adding new item to the library **");
+    public LibraryItem addItem(){
+        System.out.println("*** Add new Item ***");
+        libraryItem.setId(UUID.randomUUID());
+        System.out.println("Enter item title");
+        libraryItem.setTitle(scanner.nextLine());
+        System.out.println();
+        return libraryItem;
+    }
 
-        System.out.println("Enter item name");
-        String item = scanner.nextLine();
-        libraryItem.setTitle(item);
-
-        System.out.println("Enter item code");
-        String code = scanner.nextLine();
-        ;
-
-        return book;
-        System.out.println("");
-        itemList.add(item);
+    public List<LibraryItem> addItems(){
+        Boolean continueFalg=false;
+        while(continueFalg){
+           itemList.add(addItem());
+            System.out.println("Enter c to exit, press ENTER to continue for adding more books");
+            if(scanner.nextLine().equalsIgnoreCase("c")){
+                continueFalg=true;
+            }
+        }
         return itemList;
-    }*/
-    public LibraryItem findById(String id) {
+    }
+
+    public LibraryItem findById() {
+        displayItems();
+        System.out.println("Enter ID to search");
+        String id=scanner.nextLine();
         for(LibraryItem l: itemList){
             if(l.getId().equals(l)){
                 System.out.println("Item is found");
@@ -39,6 +49,7 @@ public class LibraryItemService {
     }
 
     public void searchByTitle(){
+        displayItems();
         System.out.println("Enter item to search");
         String itemToSearch=scanner.nextLine();
         for(LibraryItem l:itemList){
