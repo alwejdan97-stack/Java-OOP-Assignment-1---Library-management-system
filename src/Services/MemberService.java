@@ -27,6 +27,14 @@ public class MemberService {
             String phoneNumber = scanner.nextLine();
             memeber.setPhoneNumber(phoneNumber);
 
+            System.out.println("Enter street");
+            String street = scanner.nextLine();
+            memeber.setStreet(street);
+
+            System.out.println("Enter city");
+            String city = scanner.nextLine();
+            memeber.setCity(city);
+
             return memeber;
         }
 
