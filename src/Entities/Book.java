@@ -2,7 +2,7 @@ package Entities;
 
 import Behaviours.ItemInterface;
 
-public class Book extends ParentItems{
+public class Book extends LibraryItem{
     private String bookCode;
 
     public void setBookCode(String bookCode){

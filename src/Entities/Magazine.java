@@ -1,12 +1,12 @@
 package Entities;
 
-public class Magazine extends ParentItems{
-    private String magazineCode;
+public class Magazine extends LibraryItem{
+    private String code;
 
-    public void setMagazineCode(String magazineCode){
-        this.magazineCode=magazineCode;
+    public void setCode(String code){
+        this.code = code;
     }
-    public String getMagazineCode(){
-        return magazineCode;
+    public String getCode(){
+        return code;
     }
 }

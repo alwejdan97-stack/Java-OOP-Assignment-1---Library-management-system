@@ -26,7 +26,7 @@ public class MagazineService {
 
         System.out.println("Enter magazine code");
         String magazineCode = scanner.nextLine();
-        magazine.setMagazineCode(magazineCode);
+        magazine.setCode(magazineCode);
 
         return magazine;
     }
