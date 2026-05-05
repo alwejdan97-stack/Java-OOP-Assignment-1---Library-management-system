@@ -3,38 +3,36 @@ package Entities;
 import Behaviours.LibraryInterface;
 
 import java.util.List;
+import java.util.UUID;
 
-public class LibraryItem extends ParentAddress implements LibraryInterface {
-    public List<Magazine> magazineList;
-    public List<Book> bookList;
-    public List<Member> memeberList;
+public class LibraryItem{
+    private String id;
+    private String title;
+    private Boolean status;
 
-
-    @Override
-    public Boolean registerMember(Member memeber) {
-        Boolean status=memeberList.add(memeber);
+    public void setId(String id){
+        this.id=id;
+    }
+    public String getId(){
+        return id;
+    }
+    public void setTitle(String title){
+        this.title=title;
+    }
+    public String getTitle(){
+        return title;
+    }
+    public void setStatus(Boolean status){
+        this.status=status;
+    }
+    public Boolean getStatus(){
         return status;
     }
 
-    @Override
-    public Boolean addMagazine(Magazine magazine) {
-        Boolean status=magazineList.add(magazine);
-        return status;
+    public void borrowItem(){
+        this.status=false;
     }
-
-    @Override
-    public Boolean addBook(Book book) {
-        Boolean status=bookList.add(book);
-        return status;
-    }
-
-    @Override
-    public void displayMagazine() {
-
-    }
-
-    @Override
-    public void displayBook() {
-
+    public void returnItem(){
+        this.status=true;
     }
 }

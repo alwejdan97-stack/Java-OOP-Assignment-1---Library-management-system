@@ -52,7 +52,7 @@ public class MemberService {
         return memeberList;
     }
 
-    public Member findById() {
+    public void findById() {
         displayMembers();
         System.out.println("Enter member ID to search");
         String memberId=scanner.nextLine();
@@ -66,7 +66,6 @@ public class MemberService {
         if(!found){
             System.out.println("Member NOT found");
         }
-        return memeber;
     }
 
     public void displayMembers(){

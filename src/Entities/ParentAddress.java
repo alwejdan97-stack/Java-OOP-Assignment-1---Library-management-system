@@ -1,4 +1,4 @@
-package Entities;
+/*package Entities;
 
 import java.util.List;
 import java.util.UUID;
@@ -85,4 +85,4 @@ public class ParentAddress {
     public List<Member> getMemeberList() {
         return memeberList;
     }
-}
+}*/

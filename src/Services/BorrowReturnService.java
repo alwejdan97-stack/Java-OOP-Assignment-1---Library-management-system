@@ -10,17 +10,26 @@ import java.util.List;
 import java.util.*;
 
 public class BorrowReturnService {
-    Magazine magazine=new Magazine();
-    Book book=new Book();
-    List<Magazine> magazineList=new ArrayList<>();
-    List<Book> bookList=new ArrayList<>();
-    LibraryItem library=new LibraryItem();
+
+    LibraryItem item=new LibraryItem();
     Member member=new Member();
     public static Scanner scanner=new Scanner(System.in);
 
-    public void borrowBook(String memberId, String itemId){
-        Member member=MemberService.findById();
-        LibraryItem library=LibraryItemService.findById();
+    public void borrowItem(String memberId, String itemId){
+        Member member=MemberService.findById(memberId);
+        LibraryItem item=LibraryItemService.findById(itemId);
+        if(member== null || item==null){
+            System.out.println("NOT found");
+        }
+        member.borrowBook();
+    }
+
+    public void returnItem(String memberId, String itemId){
+        Member member=MemberService.findById(memberId);
+        LibraryItem item=LibraryItemService.findById(itemId);
+        if(member== null || item==null){
+            System.out.println("NOT found");
+        }
     }
 
 }
