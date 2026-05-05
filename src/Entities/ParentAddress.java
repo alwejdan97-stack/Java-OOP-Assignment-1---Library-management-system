@@ -28,6 +28,14 @@ public class ParentAddress {
         return name;
     }
 
+    public void setPhoneNumber(String phoneNumber){
+        this.phoneNumber=phoneNumber;
+    }
+
+    public String getPhoneNumber(){
+        return phoneNumber;
+    }
+
     public void findById(UUID id) {
         this.id = id;
     }
