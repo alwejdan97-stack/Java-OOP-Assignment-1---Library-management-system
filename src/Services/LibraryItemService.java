@@ -54,7 +54,7 @@ public class LibraryItemService {
         String itemToSearch=scanner.nextLine();
         for(LibraryItem l:itemList){
             if(l.getTitle().equalsIgnoreCase(itemToSearch)){
-                System.out.println("Item Name: "+l.getTitle()+" | ID: "+l.getId()+" | Status: "l.getStatus());
+                System.out.println("Item Name: "+l.getTitle()+" | ID: "+l.getId()+" | Status: "+l.getStatus());
             }
         }
     }
