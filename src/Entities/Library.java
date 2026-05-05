@@ -2,7 +2,7 @@ package Entities;
 
 import java.util.List;
 
-public class LibraryItems extends ParentAddress{
+public class Library extends ParentAddress{
     private List<Magazine> magazineList;
     private List<Book> bookList;
     private List<Memeber> memeberList;
