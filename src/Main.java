@@ -7,23 +7,20 @@ import Services.LibraryItemService;
 import Services.MemberService;
 
 import java.util.Scanner;
-import java.util.UUID;
 
-public class Menu {
-    private LibraryItemService libraryItemService;
-    private MemberService memberService;
-    private BorrowReturnService borrowReturnService;
-    private Scanner scanner = new Scanner(System.in);
+public class Main {
+    static LibraryItemService libraryItemService;
+    static MemberService memberService;
+    static BorrowReturnService borrowReturnService;
+    static Scanner scanner = new Scanner(System.in);
     Magazine magazine= new Magazine();
     Book book= new Book();
     Address address=new Address();
     Member member=new Member();
+    /*LibraryItemService libraryItemService= new LibraryItemService();
+    MemberService memberService=new MemberService();
+    BorrowReturnService borrowReturnService=new BorrowReturnService();*/
 
-    public Menu() {
-        LibraryItemService libraryItemService= new LibraryItemService();
-        MemberService memberService=new MemberService();
-        BorrowReturnService borrowReturnService=new BorrowReturnService(libraryItemService,memberService);
-    }
 
     public void start() {
         Boolean start=true;
@@ -42,14 +39,38 @@ public class Menu {
             scanner.nextLine();
 
             switch (choice) {
-                case 1 -> addBook();
-                case 2 -> addMagazine();
-                case 3 -> libraryItemService.displayItems();
-                case 4 -> search();
-                case 5 -> addMember();
-                case 6 -> memberService.displayMembers();
-                case 7 -> borrow();
-                case 8 -> returnItem();
+                case 1 -> {
+                    addBook();
+                    start();
+                }
+                case 2 -> {
+                    addMagazine();
+                    start();
+                }
+                case 3 -> {
+                    libraryItemService.displayItems();
+                    start();
+                }
+                case 4 -> {
+                    search();
+                    start();
+                }
+                case 5 -> {
+                    addMember();
+                    start();
+                }
+                case 6 -> {
+                    memberService.displayMembers();
+                    start();
+                }
+                case 7 -> {
+                    borrow();
+                    start();
+                }
+                case 8 -> {
+                    returnItem();
+                    start();
+                }
                 case 9 -> System.exit(0);
             }
         }
